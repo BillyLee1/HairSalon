@@ -1,6 +1,10 @@
 @model HairSalon.Models.Client
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
 
 <h4>Add a new client</h4>
+
+<p><strong>NOTE:</strong> You need to have at least one stylist before you can add a client!</p>
+<p>Visit @Html.ActionLink("this page", "Create", "stylists") to create a stylist.</p>
 
 @using (Html.BeginForm())
 {
