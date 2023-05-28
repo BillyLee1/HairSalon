@@ -1,6 +1,10 @@
 @model HairSalon.Models.Stylist
 @using HairSalon.Models
 
+@{
+  Layout = "_Layout";
+}
+
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
 
 <h2>Stylist Details</h2>
@@ -12,7 +16,7 @@
 }
 else
 {
-  <h2>@Model.StylistName clients </h2>
+  <h2>@Model.StylistName clients: </h2>
   <ul>
     @foreach (Client client in Model.Clients)
     {
